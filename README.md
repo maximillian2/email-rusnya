@@ -48,3 +48,6 @@
     }
 ]
 ```
+
+# Description
+Takes each email from JSON file and sends messages till the server refuses (threshold 10 exceptions) and then moves to the next email.
