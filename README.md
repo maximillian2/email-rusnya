@@ -11,7 +11,7 @@
 </settings>
 ```
 
-# Set up docker image name in pom.xml
+# Set up docker image name (pom.xml)
 ```
 ...
 <plugin>
