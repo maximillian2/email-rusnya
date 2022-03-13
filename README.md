@@ -1,3 +1,31 @@
+# Set up docker hub creds (~/.m2/settings.xml)
+```
+<settings>
+    <servers>
+        <server>
+            <id>registry.hub.docker.com</id>
+            <username>docker-name</username>
+            <password>docker-pass</password>
+        </server>
+    </servers>
+</settings>
+```
+
+# Set up docker image name in pom.xml
+```
+...
+<plugin>
+    <groupId>com.google.cloud.tools</groupId>
+    <artifactId>jib-maven-plugin</artifactId>
+    <version>3.2.0</version>
+    <configuration>
+        <to>
+            <image>registry.hub.docker.com/docker-username/docker-image-name</image>
+        </to>
+    </configuration>
+...
+```
+
 # Build
 `mvn clean package`
 
