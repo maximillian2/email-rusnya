@@ -54,7 +54,6 @@ public class EmailSelector {
         Properties properties = new Properties();
         properties.put(MAIL_SMTP_HOST, "smtp-mail.outlook.com");
         properties.put(MAIL_SMTP_PORT, "587");
-//        properties.put(MAIL_SMTP_SSL_ENABLE, "true");
         properties.put(MAIL_SMTP_STARTTLS_ENABLE, "true");
         properties.put(MAIL_SMTP_AUTH, "true");
         return properties;
