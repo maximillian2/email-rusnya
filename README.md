@@ -31,7 +31,7 @@
 
 # Run
 
-`docker run -v /path/to/emails.json:/email.json:ro email_rusnya /email.json`
+`docker run -v /path/to/emails.json:/email.json:ro registry.hub.docker.com/maximillian2/email_rusnya /email.json`
 
 # Email File format
 ## Only Gmail, Yahoo, and Outlook emails supported atm!
