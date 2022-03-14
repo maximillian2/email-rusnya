@@ -11,6 +11,7 @@ import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.Transport;
+import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.io.FileReader;
@@ -57,9 +58,12 @@ public class Main {
                     var message = prepareMail(session, email.getUsername(), parsedEmail);
                     Transport.send(message);
                     LOGGER.info("{} -> sent successfully.", Arrays.toString(message.getAllRecipients()));
+                } catch (AddressException ae) {
+                    LOGGER.warn("Looks like incorrect address, not incrementing fail counter.", ae);
+                    LOGGER.info("Fail counter: {}", failCount);
                 } catch (MessagingException mex) {
                     LOGGER.warn("Message was not sent with an exception", mex);
-                    failCount++;
+                    LOGGER.info("Fail counter: {}", ++failCount);
                 }
 
                 if (failCount > FAIL_THRESHOLD) {

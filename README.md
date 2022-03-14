@@ -34,7 +34,7 @@
 `docker run -v /path/to/emails.json:/email.json:ro email_rusnya /email.json`
 
 # Email File format
-## Only Gmail and Yahoo emails supported atm!
+## Only Gmail, Yahoo, and Outlook emails supported atm!
 
 ```json
 [

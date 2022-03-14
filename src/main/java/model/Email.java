@@ -18,6 +18,8 @@ public class Email {
             return EmailType.GMAIL;
         } else if (username.endsWith("@yahoo.com")) {
             return EmailType.YAHOO;
+        } else if (username.endsWith("@outlook.com")) {
+            return EmailType.OUTLOOK;
         } else {
             throw new UnsupportedEmailTypeException();
         }
