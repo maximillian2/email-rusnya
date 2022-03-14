@@ -30,8 +30,13 @@
 `mvn clean package`
 
 # Run
+Create JSON with email creds. After that bind-mount it in docker.
 
-`docker run -v /path/to/emails.json:/email.json:ro registry.hub.docker.com/maximillian2/email_rusnya /email.json`
+For example, there is a file under /home directory called `emails.json`.
+
+Then docker command will be:
+
+`docker run -v /home/user/emails.json:/email.json:ro registry.hub.docker.com/maximillian2/email_rusnya /email.json`
 
 # Email File format
 ## Only Gmail, Yahoo, and Outlook emails supported atm!
